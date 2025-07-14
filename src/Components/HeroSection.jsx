@@ -52,7 +52,7 @@ const HeroSection = () => {
         </motion.button>
       </div>
 
-      <div className="w-full md:w-1/2 min-h-[450px] md:min-h-screen relative overflow-hidden">
+      <div className="w-full md:w-1/2 min-h-[480px] md:min-h-screen relative overflow-hidden">
         <motion.img
           key={currentImageIndex}
           initial={{ opacity: 0 }}
