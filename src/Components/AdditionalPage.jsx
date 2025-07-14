@@ -57,18 +57,6 @@ const AdditionalPage = () => {
             </div>
           </div>
 
-          {/* Leave a Message */}
-          <div className="group relative flex items-center">
-            <a
-              href="/contact"
-              className="bg-white shadow-lg rounded-l-full p-3 hover:bg-purple-500 hover:text-white transition-all transform hover:scale-110 cursor-pointer"
-            >
-              <HiPencil className="w-6 h-6 transition-transform duration-300 group-hover:animate-pulse" />
-            </a>
-            <div className="absolute right-20 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0 -translate-x-4 transition-all duration-300 bg-purple-500 text-white text-sm rounded-full shadow-xl px-6 py-2 font-semibold whitespace-nowrap min-w-[150px] text-center">
-              Leave a message
-            </div>
-          </div>
         </div>
       )}
     </div>
