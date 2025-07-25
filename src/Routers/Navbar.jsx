@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const navLinks = [
   { to: "/Products", label: " Products " },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
   { to: "/Solutions", label: "Solutions" },
+  { to: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
