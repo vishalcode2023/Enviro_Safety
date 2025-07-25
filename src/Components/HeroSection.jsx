@@ -22,7 +22,7 @@ const HeroSection = () => {
           initial={{ y: 80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-white text-[12vw] sm:text-[8vw] md:text-[9vw] font-extrabold tracking-tight leading-tight drop-shadow-xl mb-2"
+          className="text-white text-[14vw] sm:text-[8vw] md:text-[9vw] font-extrabold tracking-tight leading-tight drop-shadow-xl mb-2"
         >
           <span className="text-white bg-clip-text">Enviro Safety Glass</span>
         </motion.h1>
