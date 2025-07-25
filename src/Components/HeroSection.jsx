@@ -46,7 +46,7 @@ const HeroSection = () => {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="mt-12 w-14 h-14 flex items-center justify-center rounded-full border-2 border-white/30 bg-white/10 shadow-lg backdrop-blur-sm hover:scale-110 transition-all duration-300 cursor-pointer"
+          className="mt-10 w-14 h-14 flex items-center justify-center rounded-full border-2 border-white/30 bg-white/10 shadow-lg backdrop-blur-sm hover:scale-110 transition-all duration-300 cursor-pointer"
           onClick={() => {
             const nextSection = document.getElementById("next-section");
             if (nextSection) {
