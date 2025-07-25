@@ -16,7 +16,7 @@ const HeroSection = () => {
       ></video>
 
       {/* Centered Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full px-5 text-center mt-40 sm:mt-38 md:mt-28">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full px-5 text-center mt-34 sm:mt-38 md:mt-32">
         {/* Heading */}
         <motion.h1
           initial={{ y: 80, opacity: 0 }}
