@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const navLinks = [
   { to: "/Products", label: " Products " },
   { to: "/about", label: "About" },
-  { to: "/Solutions", label: "Solutions" },
   { to: "/contact", label: "Contact" },
+  { to: "/Solutions", label: "Solutions" },
 ];
 
 const Navbar = () => {
@@ -88,10 +88,10 @@ const Navbar = () => {
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="sm:w-1/3 flex flex-col items-center sm:items-start"
               >
-                <div className="rounded-xl overflow-hidden max-w-[500px] w-full mb-4 shadow-2xl">
+                <div className="rounded-xl overflow-hidden max-w-[600px] w-full mb-4 shadow-2xl">
                   <video
                     className="w-full h-auto object-cover rounded-xl shadow-xl"
-                    src="https://res.cloudinary.com/dt2juqy9s/video/upload/2450251-uhd_3840_2160_30fps_js3w8d.mp4"
+                    src="https://res.cloudinary.com/dybpd6dkz/video/upload/Glass_WEB_Video1_Re_1_1_ztjjbx.mp4"
                     autoPlay
                     muted
                     loop
@@ -140,14 +140,6 @@ const Navbar = () => {
                     </motion.div>
                   ))}
                 </motion.div>
-
-                {/* CTA Button */}
-                <Link
-                  to="/Contact"
-                  className="border border-white text-white px-8 py-3 mt-8 rounded-md hover:bg-white hover:text-black transition-colors text-lg font-medium"
-                >
-                  Take a seat
-                </Link>
               </motion.div>
             </div>
 
@@ -155,10 +147,10 @@ const Navbar = () => {
             <div className="w-full pt-6 mt-6 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
               <span>Your Vision Our Glass</span>
               <div className="flex space-x-4 mt-4 sm:mt-0">
-                {["X", "Instagram", "LinkedIn"].map((social, i) => (
+                {["Instagram",].map((social, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href="https://www.instagram.com/enviro_safetyglass/"
                     className="hover:text-white transition-colors flex items-center"
                   >
                     {social}
