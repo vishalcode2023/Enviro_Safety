@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 const SolutionsData = () => {
   const images = [
-    "https://www.magnumglass.in/images/folio/slider/3.jpg",
-    "https://www.magnumglass.in/images/folio/slider/2.jpg",
+    "https://res.cloudinary.com/dybpd6dkz/image/upload/v1754646019/_DSC4937_ydcjbv.jpg",
+    "https://res.cloudinary.com/dybpd6dkz/image/upload/v1754646616/_DSC4892_vvbysp.jpg",
+    "https://res.cloudinary.com/dybpd6dkz/image/upload/v1754646745/_DSC4946_bdxoos.jpg"
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -25,7 +26,7 @@ const SolutionsData = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="w-full max-w-[480px] h-auto mx-auto"
+          className="w-full max-w-[600px] h-auto mx-auto"
         >
           <motion.img
             key={currentImage}
