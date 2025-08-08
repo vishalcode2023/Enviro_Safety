@@ -23,7 +23,7 @@ const AboutSection = () => {
         {/* Middle - Main Image */}
         <div className="w-full lg:w-2/3 flex-shrink-0 rounded-3xl overflow-hidden shadow-lg max-w-[700px] h-[400px]">
           <img
-            src="https://www.magnumglass.in/images/folio/slider/1.jpg"
+            src="https://res.cloudinary.com/dybpd6dkz/image/upload/v1754647023/_DSC4939_xotgwo.jpg"
             alt="Enviro Safety Interior"
             className="w-full h-full object-cover"
           />
@@ -34,7 +34,7 @@ const AboutSection = () => {
       <div className="mt-16 grid md:grid-cols-2 items-start gap-10">
         <div className="rounded-2xl overflow-hidden shadow-md max-w-md h-[250px] mx-auto md:mx-0">
           <img
-            src="https://www.magnumglass.in/images/folio/slider/2.jpg"
+            src="https://res.cloudinary.com/dybpd6dkz/image/upload/v1754647130/_DSC4872_qx2nfp.jpg"
             alt="Philosophy"
             className="w-full h-full object-cover"
           />
