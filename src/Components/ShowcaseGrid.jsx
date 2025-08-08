@@ -7,19 +7,19 @@ const ShowcaseGrid = () => {
       title: "COMMERCIAL BUILDINGS",
       subtitle: "LAMINATED SAFETY GLASS",
       image:
-        "https://www.magnumglass.in/images/folio/thumbs/14.jpg",
+        "https://images.unsplash.com/photo-1621831337128-35676ca30868?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "RESIDENTIAL WORKS",
       subtitle: "LACQUERED GLASS - SAINT GOBAIN",
       image:
-        "https://www.magnumglass.in/images/folio/thumbs/17.jpg",
+        "https://res.cloudinary.com/dybpd6dkz/image/upload/v1754646889/_DSC4876_qfzqqt.jpg",
     },
     {
       title: "INSTITUTIONAL PROJECTS",
       subtitle: "DECORATIVE SAFETY GLASS",
       image:
-        "https://www.magnumglass.in/images/folio/thumbs/3.jpg",
+        "https://images.unsplash.com/photo-1515018993613-681b765562d1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
