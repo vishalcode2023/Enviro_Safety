@@ -8,7 +8,7 @@ const HeroSection = () => {
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="https://res.cloudinary.com/dt2juqy9s/video/upload/2450251-uhd_3840_2160_30fps_js3w8d.mp4"
+        src="https://res.cloudinary.com/dybpd6dkz/video/upload/Glass_WEB_Video1_Re_1_1_ztjjbx.mp4"
         autoPlay
         muted
         loop
@@ -16,7 +16,7 @@ const HeroSection = () => {
       ></video>
 
       {/* Centered Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full px-5 text-center mt-34 sm:mt-38 md:mt-32">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full px-5 text-center mt-40 sm:mt-38 md:mt-32">
         {/* Heading */}
         <motion.h1
           initial={{ y: 80, opacity: 0 }}
