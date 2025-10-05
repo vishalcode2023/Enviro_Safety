@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { User, Mail, Phone, Info, Edit3, ArrowRight } from 'lucide-react';
-import axios from 'axios';
-import toast from 'react-hot-toast';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { User, Mail, Phone, Info, Edit3, ArrowRight } from "lucide-react";
+import toast from "react-hot-toast";
 
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
     agreeToData: false,
   });
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('submitting');
+    setStatus("submitting");
 
+    // Validation
     if (
       !formData.name ||
       !formData.email ||
@@ -35,38 +35,44 @@ const ContactFormSection = () => {
       !formData.message ||
       !formData.agreeToData
     ) {
-      setStatus('error');
-      toast.error('Please fill in all required fields and agree to data collection.');
+      toast.error("Please fill in all required fields and agree to data collection.");
+      setStatus("");
       return;
     }
 
     try {
-      const response = await axios.post("https://enviro-backend-wyi0.onrender.com/api/enviro", {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        subject: formData.subject,
-        message: formData.message,
+      const response = await fetch("https://enviro-backend-w5j4.onrender.com/api/enviro", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
-      if (response.status === 200 || response.status === 201) {
-        setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: '',
-          agreeToData: false,
-        });
-        toast.success('Your message was sent successfully!');
-      } else {
-        throw new Error('Unexpected response from server');
+      if (!response.ok) {
+        throw new Error("Failed to send message");
       }
+
+      const data = await response.json();
+
+      // Success
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+        agreeToData: false,
+      });
+      setStatus("success");
+      toast.success(data?.message || "Your message was sent successfully!");
+
+      // Reset after 3s
+      setTimeout(() => setStatus(""), 3000);
     } catch (error) {
-      console.error("Axios error:", error);
-      setStatus('error');
-      toast.error('There was an error submitting the form. Please try again.');
+      console.error(error);
+      setStatus("");
+      toast.error("Something went wrong. Please try again later.");
     }
   };
 
@@ -76,7 +82,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row  text-gray-900 py-38 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex flex-col lg:flex-row text-gray-900 py-38 px-4 sm:px-6 lg:px-8">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 flex flex-col justify-center p-4 lg:p-8">
         <motion.h1
@@ -98,9 +104,8 @@ const ContactFormSection = () => {
           className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6"
         >
           At Enviro Safety Glass, we understand that every building professional
-          has a unique set of product specifications based on size,
-          scale, and functionality of the end-project. We combine our knowledge,
-          advanced technology, and firm commitment to deliver aesthetically pleasing glass
+          has a unique set of product specifications. We combine knowledge,
+          advanced technology, and commitment to deliver aesthetically pleasing glass
           products with unlimited possibilities.
         </motion.p>
 
@@ -111,7 +116,7 @@ const ContactFormSection = () => {
           viewport={{ once: true, amount: 0.5 }}
           className="text-base sm:text-lg text-gray-700 leading-relaxed"
         >
-          In everything we do, Enviro Safety Glass strives to deliver authentic and superior glass
+          Enviro Safety Glass strives to deliver authentic and superior glass
           solutions that make greater accomplishments possible.
         </motion.p>
       </div>
@@ -131,7 +136,7 @@ const ContactFormSection = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name */}
-            <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }}>
+            <motion.div variants={itemVariants}>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                 <input
@@ -146,7 +151,7 @@ const ContactFormSection = () => {
             </motion.div>
 
             {/* Email */}
-            <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }}>
+            <motion.div variants={itemVariants}>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                 <input
@@ -161,7 +166,7 @@ const ContactFormSection = () => {
             </motion.div>
 
             {/* Phone */}
-            <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }}>
+            <motion.div variants={itemVariants}>
               <div className="relative">
                 <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                 <input
@@ -176,7 +181,7 @@ const ContactFormSection = () => {
             </motion.div>
 
             {/* Subject */}
-            <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }}>
+            <motion.div variants={itemVariants}>
               <div className="relative">
                 <Info className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                 <input
@@ -192,7 +197,7 @@ const ContactFormSection = () => {
           </div>
 
           {/* Message */}
-          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }}>
+          <motion.div variants={itemVariants}>
             <div className="relative">
               <Edit3 className="absolute left-3 top-4 text-gray-400" size={20} />
               <textarea
@@ -202,24 +207,22 @@ const ContactFormSection = () => {
                 onChange={handleChange}
                 rows="6"
                 className="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y"
-              ></textarea>
+              />
             </div>
           </motion.div>
 
           {/* Submit + Consent */}
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            className="flex items-center justify-between flex-wrap gap-4"
-          >
+          <motion.div variants={itemVariants} className="flex items-center justify-between flex-wrap gap-4">
             <button
               type="submit"
               className="px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg shadow-md hover:bg-teal-700 transition-all duration-300 flex items-center justify-center gap-2"
-              disabled={status === 'submitting'}
+              disabled={status === "submitting"}
             >
-              {status === 'submitting' ? 'Sending...' : 'Get In Touch'}
+              {status === "submitting"
+                ? "Sending..."
+                : status === "success"
+                ? "Sent!"
+                : "Get In Touch"}
               <ArrowRight className="ml-2" size={20} />
             </button>
 

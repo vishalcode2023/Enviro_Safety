@@ -8,6 +8,7 @@ import ContactFormSection from "./ContactFormSection";
 import Footer from "./Footer";
 import AdditionalPage from "./AdditionalPage";
 import TestimonialsSection from "./TestimonialsSection";
+import ProductVideo from "./ProductVideo";
 
 const LandingPage = () => {
   return (
@@ -16,8 +17,9 @@ const LandingPage = () => {
       <HeroSection />
       <SolutionsOverview />
       <ShowcaseGrid />
+      <ProductVideo/>
       <AboutSection />
-      {/* <TestimonialsSection/> */}
+      <TestimonialsSection/>
       <ContactFormSection/>
       <AdditionalPage/>
       <Footer/>

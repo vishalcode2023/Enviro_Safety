@@ -29,7 +29,7 @@ const wordVariants = {
 };
 
 const HeroSection = () => {
-  const [videoLoaded, setVideoLoaded] = useState(true);  
+  const [videoLoaded, setVideoLoaded] = useState(false);  
   const [startLoading, setStartLoading] = useState(false);
 
   // Lazy-load video only when HeroSection enters viewport
@@ -53,7 +53,7 @@ const HeroSection = () => {
       {startLoading && (
         <motion.video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          // src="https://res.cloudinary.com/dsey7avvl/video/upload/f_auto,q_auto/video_zormq2.mp4"
+          src="https://res.cloudinary.com/dsey7avvl/video/upload/f_auto,q_auto/video_zormq2.mp4"
           poster="https://res.cloudinary.com/dybpd6dkz/image/upload/q_auto,f_auto/Glass_WEB_Video1_Re_1_1_preview.jpg"
           autoPlay
           muted

@@ -6,6 +6,7 @@ const navLinks = [
   { to: "/", label: " Home " },
   { to: "/Products", label: " Products " },
   { to: "/about", label: "About" },
+  { to: "/Reviews", label: " Reviews " },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -20,9 +21,9 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="https://res.cloudinary.com/dybpd6dkz/image/upload/v1753333882/WhatsApp_Image_2025-07-21_at_3.51.15_PM_m2fvxl.jpg"
+              src="/Images/LogoEnviro.jpeg"
               alt="Logo"
-              className="w-14 h-10 sm:w-16 sm:h-12 object-contain rounded-full"
+              className="w-14 h-10 sm:w-16 sm:h-12 object-contain rounded-2xl"
             />
             <div className="flex flex-col ml-3">
               <span className="text-base sm:text-lg text-white font-bold">

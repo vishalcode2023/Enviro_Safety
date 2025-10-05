@@ -4,17 +4,7 @@ import { motion } from "framer-motion";
 import Footer from "./Footer";
 import AdditionalPage from "./AdditionalPage";
 import { Link } from "react-router-dom";
-
-const brochures = [
-  {
-    name: "Zolon - Glass Fitting",
-    file: "/pdfs/Zolon-Glass-Fitting.pdf", // keep in /public/pdfs/
-  },
-  {
-    name: "Zolon - Railing Production",
-    file: "/pdfs/Zolon-Railing-Production.pdf",
-  },
-];
+import ProductVideo from "./ProductVideo";
 
 const glassProductsData = [
   {
@@ -35,30 +25,12 @@ const glassProductsData = [
     description:
       "Stylish and functional  partition glass solutions for your interiors.",
     images: [
-      {
-        src: "/Images/partition_Glass1.jpg",
-        title: "Grey Tinted Glass",
-      },
-      {
-        src: "/Images/partitionGlassextra2.jpg",
-        title: "Extra Clear Matt Glass",
-      },
-      {
-        src: "/Images/clearsplash.jpg",
-        title: "Clear Splash Glass",
-      },
-      {
-        src: "/Images/Extraclearmatt.jpg",
-        title: "Extra Clear Matt Glass",
-      },
-      {
-        src: "/Images/HitchCrossGlass13.jpg",
-        title: " Hitch Cross Glass",
-      },
-      {
-        src: "/Images/BronzeTinted16.jpg",
-        title: " Bronze Tinted Glass",
-      },
+      { src: "/Images/partition_Glass1.jpg", title: "Grey Tinted Glass" },
+      { src: "/Images/partitionGlassextra2.jpg", title: "Extra Clear Matt Glass" },
+      { src: "/Images/clearsplash.jpg", title: "Clear Splash Glass" },
+      { src: "/Images/Extraclearmatt.jpg", title: "Extra Clear Matt Glass" },
+      { src: "/Images/HitchCrossGlass13.jpg", title: " Hitch Cross Glass" },
+      { src: "/Images/BronzeTinted16.jpg", title: " Bronze Tinted Glass" },
     ],
   },
   {
@@ -67,30 +39,12 @@ const glassProductsData = [
     description:
       "Collection of Fluted Glass for decorative and functional use.",
     images: [
-      {
-        src: "/Images/FlutedGlass.jpg",
-        title: "Bronze Fluted Glass",
-      },
-      {
-        src: "/Images/Clearflutedglass.jpg",
-        title: "Clear Fluted Glass",
-      },
-      {
-        src: "/Images/BronzeOneWayFluted.jpg",
-        title: "Bronze One Way Fluted",
-      },
-      {
-        src: "/Images/ConvexFluted11.jpg",
-        title: "Convex Fluted Glass",
-      },
-      {
-        src: "/Images/ChampagneFluted14.jpg",
-        title: "Champagne Fluted Glass",
-      },
-      {
-        src: "/Images/GreyFluted17.jpg",
-        title: "Grey Fluted Glass",
-      },
+      { src: "/Images/FlutedGlass.jpg", title: "Bronze Fluted Glass" },
+      { src: "/Images/Clearflutedglass.jpg", title: "Clear Fluted Glass" },
+      { src: "/Images/BronzeOneWayFluted.jpg", title: "Bronze One Way Fluted" },
+      { src: "/Images/ConvexFluted11.jpg", title: "Convex Fluted Glass" },
+      { src: "/Images/ChampagneFluted14.jpg", title: "Champagne Fluted Glass" },
+      { src: "/Images/GreyFluted17.jpg", title: "Grey Fluted Glass" },
     ],
   },
   {
@@ -98,34 +52,34 @@ const glassProductsData = [
     name: "Mirror",
     description: "Collection of mirrors for decorative and functional use.",
     images: [
-      {
-        src: "/Images/clearmirror3.jpg",
-        title: "Clear Mirror",
-      },
-      {
-        src: "/Images/GreyMattMinrror.jpg",
-        title: "Grey Matt Mirror",
-      },
-      {
-        src: "/Images/Extraclearmirror.jpg",
-        title: "Extra Clear Mirror",
-      },
-      {
-        src: "/Images/Clearmirror12.jpg",
-        title: "Clear Mirror",
-      },
+      { src: "/Images/clearmirror3.jpg", title: "Clear Mirror" },
+      { src: "/Images/GreyMattMinrror.jpg", title: "Grey Matt Mirror" },
+      { src: "/Images/Extraclearmirror.jpg", title: "Extra Clear Mirror" },
+      { src: "/Images/Clearmirror12.jpg", title: "Clear Mirror" },
     ],
   },
-
   {
     id: "bricks",
     name: "Bricks",
     description: "High-strength construction bricks for building projects.",
     images: [
-      { src: "https://placehold.co/600x400?text=Coming_Soon", title: "Bricks" },
+      { src: "/Images/Bricks1.jpg", title: "Bricks" },
+      { src: "/Images/Bricks38.jpg", title: "Bricks" },
+      { src: "/Images/Bricks39.jpg", title: "Bricks" },
+      { src: "/Images/Bricks40.jpg", title: "Bricks" },
+      { src: "/Images/Bricks41.jpg", title: "Bricks" },
+      { src: "/Images/Bricks42.jpg", title: "Bricks" },
+      { src: "/Images/Bricks43.jpg", title: "Bricks" },
+      { src: "/Images/Bricks44.jpg", title: "Bricks" },
+      { src: "/Images/Bricks45.jpg", title: "Bricks" },
+      { src: "/Images/Bricks46.jpg", title: "Bricks" },
+      { src: "/Images/Bricks47.jpg", title: "Bricks" },
+      { src: "/Images/Bricks48.jpg", title: "Bricks" },
+      { src: "/Images/Bricks49.jpg", title: "Bricks" },
+      { src: "/Images/Bricks50.jpg", title: "Bricks" },
+      { src: "/Images/Bricks51.jpg", title: "Bricks" },
     ],
   },
-
   {
     id: "toughened_glass",
     name: "Toughened Glass",
@@ -156,34 +110,23 @@ const glassProductsData = [
     description:
       "Premium lamination services with various fabrics for interiors.",
     images: [
-      {
-        src: "/Images/Frabiclimination19.jpg",
-        title: "Fabric Lamination",
-      },
-      {
-        src: "/Images/Frabicliminationgrey20.jpg",
-        title: "Fabric Lamination",
-      },
-      {
-        src: "/Images/Frabiclimination21.jpg",
-        title: "Fabric Lamination",
-      },
-      {
-        src: "/Images/Frabiclimination22.jpg",
-        title: "Fabric Lamination",
-      },
-      {
-        src: "/Images/Frabiclimination23.jpg",
-        title: "Fabric Lamination",
-      },
-      {
-        src: "/Images/Frabiclimination24.jpg",
-        title: "Fabric Lamination",
-      },
-      {
-        src: "/Images/Frabiclimination25.jpg",
-        title: "Fabric Lamination",
-      },
+      { src: "/Images/Frabiclimination19.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabicliminationgrey20.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination21.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination22.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination23.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination24.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination25.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabicliminationgrey26.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabicliminationg27.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination28.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination30.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination31.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination32.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination33.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination34.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination35.jpg", title: "Fabric Lamination" },
+      { src: "/Images/Frabiclimination36.jpg", title: "Fabric Lamination" },
     ],
   },
   {
@@ -202,7 +145,6 @@ const glassProductsData = [
     id: "zolon_fittings",
     name: "Zolon - Glass Fitting",
     description: "Complete list of Zolon Glons fittings with prices.",
-    pdfLink: "/pdfs/zolon_fittings.pdf",
     images: [
       {
         src: "https://placehold.co/600x400?text=Zolon+Fitting",
@@ -240,7 +182,6 @@ const glassProductsData = [
     id: "zolon_railing",
     name: "Zolon - Railing Production",
     description: "Complete list of Zolon Railing products with prices.",
-    pdfLink: "Zolon_Railing_System_Brochure_2023.pdf",
     images: [
       {
         src: "https://placehold.co/600x400?text=Zolon+Railing",
@@ -248,7 +189,6 @@ const glassProductsData = [
       },
     ],
   },
-
   {
     id: "glass_aluminum_slider",
     name: "Glass Aluminum Slider",
@@ -270,19 +210,6 @@ const Products = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const handleDownload = (pdfLink, name) => {
-    try {
-      const link = document.createElement("a");
-      link.href = pdfLink;
-      link.setAttribute("download", `${name}.pdf`);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (err) {
-      window.open(pdfLink, "_blank"); // fallback
-    }
-  };
-
   return (
     <div className="bg-white text-gray-900">
       <Navbar />
@@ -297,19 +224,6 @@ const Products = () => {
             {glassProductsData.find((p) => p.id === activeGlassTab)?.name}
             <div className="h-1 bg-[#1D293D] w-16 mt-3 rounded-full"></div>
           </motion.h2>
-
-          {/* Mobile-only download buttons */}
-          <div className="md:hidden flex flex-col gap-3 mb-6">
-            {brochures.map((b, i) => (
-              <button
-                key={i}
-                onClick={() => handleDownload(b.file, b.name)}
-                className="bg-[#0084D1] hover:bg-blue-700 text-white font-semibold py-2.5 px-4 rounded-lg shadow-md transition-colors"
-              >
-                Download {b.name}
-              </button>
-            ))}
-          </div>
 
           {/* Mobile Tab Bar */}
           <div className="md:hidden flex overflow-x-auto gap-4 py-4 mb-8 custom-scrollbar">
@@ -330,7 +244,7 @@ const Products = () => {
           </div>
 
           <div className="flex flex-col md:flex-row gap-12">
-            {/* Sidebar for Desktop */}
+            {/* Sidebar */}
             <div className="md:w-1/4 lg:w-1/5 bg-[#1D293D] p-6 rounded-lg hidden md:block text-white">
               <h3 className="text-xl font-bold mb-6 uppercase">
                 Products Available
@@ -338,27 +252,16 @@ const Products = () => {
               <ul className="space-y-3">
                 {glassProductsData.map((productType) => (
                   <li key={productType.id}>
-                    {productType.pdfLink ? (
-                      <button
-                        onClick={() =>
-                          handleDownload(productType.pdfLink, productType.name)
-                        }
-                        className="w-full block py-2 px-3 rounded-md transition-colors duration-200 text-base font-medium bg-[#0084D1] text-white font-semibold hover:bg-blue-600"
-                      >
-                        {productType.name}
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => setActiveGlassTab(productType.id)}
-                        className={`w-full text-left py-2 px-3 rounded-md transition-colors duration-200 text-base font-medium flex items-center justify-between ${
-                          activeGlassTab === productType.id
-                            ? "bg-[#0084D1] text-white font-semibold"
-                            : "text-gray-300 hover:bg-[#2A3B56] hover:text-white"
-                        }`}
-                      >
-                        <span className="flex-grow">{productType.name}</span>
-                      </button>
-                    )}
+                    <button
+                      onClick={() => setActiveGlassTab(productType.id)}
+                      className={`w-full text-left py-2 px-3 rounded-md transition-colors duration-200 text-base font-medium flex items-center justify-between ${
+                        activeGlassTab === productType.id
+                          ? "bg-[#0084D1] text-white font-semibold"
+                          : "text-gray-300 hover:bg-[#2A3B56] hover:text-white"
+                      }`}
+                    >
+                      <span className="flex-grow">{productType.name}</span>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -403,28 +306,6 @@ const Products = () => {
                           </tbody>
                         </table>
                       </div>
-                    ) : productType.railing ? (
-                      <div className="overflow-x-auto border rounded-lg shadow-md">
-                        <table className="w-full text-sm text-left text-gray-700">
-                          <thead className="bg-gray-100">
-                            <tr>
-                              <th className="px-4 py-3">Railing Model</th>
-                              <th className="px-4 py-3">Price</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {productType.railing.map((rail, idx) => (
-                              <tr
-                                key={idx}
-                                className="border-t hover:bg-gray-50"
-                              >
-                                <td className="px-4 py-3">{rail.name}</td>
-                                <td className="px-4 py-3">{rail.price}</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
                     ) : (
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {productType.images.map((image, index) => (
@@ -440,6 +321,9 @@ const Products = () => {
                               <img
                                 src={image.src}
                                 alt={image.title}
+                                loading="lazy"  // ✅ Lazy load
+                                width="100%"
+                                height="100%"
                                 className="w-full h-full object-cover rounded-t-2xl"
                                 onError={(e) => {
                                   e.target.onerror = null;

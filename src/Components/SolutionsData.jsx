@@ -1,38 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const SolutionsData = () => {
-  const images = [
-    "https://ik.imagekit.io/kmizpj3aq/_DSC4937_ydcjbv.jpg?updatedAt=1756219425891",
-    "https://ik.imagekit.io/kmizpj3aq/_DSC4892_vvbysp.jpg?updatedAt=1756219425879",
-    "https://ik.imagekit.io/kmizpj3aq/_DSC4946_bdxoos.jpg?updatedAt=1756219426541",
-  ];
-
-  const [currentImage, setCurrentImage] = useState(0);
-
-  // Preload the next image
-  useEffect(() => {
-    const nextIndex = (currentImage + 1) % images.length;
-    const img = new Image();
-    img.src = images[nextIndex];
-  }, [currentImage]);
-
-  // Auto-slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-
   return (
     <section
       className="relative w-full bg-white px-4 sm:px-8 py-16 sm:py-24"
       id="next-section"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-        {/* Left Side: Sliding Image */}
+        {/* Left Side: Single Video */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -40,15 +17,17 @@ const SolutionsData = () => {
           viewport={{ once: true }}
           className="w-full max-w-[600px] h-auto mx-auto relative"
         >
-          <motion.img
-            key={currentImage}
-            src={images[currentImage]}
-            alt={`Enviro Safety Glass product ${currentImage + 1}`}
-            loading="lazy"
+          <motion.video
+            src="/videos/Solutiondata.mp4" // replace with your actual video path
+            autoPlay
+            muted
+            loop
+            controls
+            playsInline
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="w-full h-auto max-h-[500px] object-cover rounded-2xl shadow-xl"
+            className="w-full h-auto max-h-[800px] object-cover rounded-2xl shadow-xl"
           />
         </motion.div>
 

@@ -8,6 +8,7 @@ import PrivacyComponents from '../Components/PrivacyComponents'
 import Terms from '../Components/Terms'
 import AboutSection from '../Components/AboutSection'
 import AboutPage from '../Components/AboutPage'
+import ReviewPage from '../Components/ReviewPage'
 
 
 
@@ -22,6 +23,7 @@ const MainRouter = () => {
         <Route path='/contact' element={<EmailContact />} />
         <Route path='/privacy' element={<PrivacyComponents/>} />
         <Route path='/Terms' element={<Terms/>} />
+        <Route path='/Reviews' element={<ReviewPage/>}/>
         <Route path='*' element={<LandingPage />} />
     </Routes>
     </>
