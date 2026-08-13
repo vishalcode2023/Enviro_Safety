@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import AdditionalPage from "./AdditionalPage";
 import TestimonialsSection from "./TestimonialsSection";
 import ProductVideo from "./ProductVideo";
+import ClientReviewSection from "./ClientReviewSection";
 
 const LandingPage = () => {
   return (
@@ -17,12 +18,14 @@ const LandingPage = () => {
       <HeroSection />
       <SolutionsOverview />
       <ShowcaseGrid />
-      <ProductVideo/>
+      <ProductVideo />
+      <TestimonialsSection />
       <AboutSection />
-      <TestimonialsSection/>
-      <ContactFormSection/>
-      <AdditionalPage/>
-      <Footer/>
+      <ContactFormSection />
+      <AdditionalPage />
+
+      {/* <ClientReviewSection/> */}
+      <Footer />
     </div>
   );
 };

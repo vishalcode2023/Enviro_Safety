@@ -8,6 +8,7 @@ const navLinks = [
   { to: "/about", label: "About" },
   { to: "/Reviews", label: " Reviews " },
   { to: "/contact", label: "Contact" },
+  { to: "/ongoing", label: " Ongoing Projects " },
 ];
 
 const Navbar = () => {
@@ -72,7 +73,7 @@ const Navbar = () => {
             <div className="w-full flex justify-between items-center mb-6">
               <div className="flex items-center">
                 <img
-                  src="https://res.cloudinary.com/dybpd6dkz/image/upload/v1753333882/WhatsApp_Image_2025-07-21_at_3.51.15_PM_m2fvxl.jpg"
+                  src="/Images/LogoEnviro.jpeg"
                   alt="Logo"
                   className="w-12 h-12 object-contain rounded-xl"
                 />

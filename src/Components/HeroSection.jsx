@@ -53,7 +53,7 @@ const HeroSection = () => {
       {startLoading && (
         <motion.video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src="https://res.cloudinary.com/dsey7avvl/video/upload/f_auto,q_auto/video_zormq2.mp4"
+          src="/videos/Herosectionvideo.mp4"
           poster="https://res.cloudinary.com/dybpd6dkz/image/upload/q_auto,f_auto/Glass_WEB_Video1_Re_1_1_preview.jpg"
           autoPlay
           muted
@@ -68,7 +68,7 @@ const HeroSection = () => {
       )}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Full-Screen Loader */}
       <AnimatePresence>
